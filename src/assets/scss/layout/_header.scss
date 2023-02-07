@@ -1,3 +1,40 @@
-#herder {
-    flex: 0 0 200px
+#header {
+    flex: 0 0 250px;
+
+    .header-content {
+        padding: 2rem;
+        border: 3px solid $grey;
+        border-radius: 16px;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .header-title {
+        line-height: 35px;
+        font-size: 2.5rem;
+
+        .header-title-text {
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+
+    .score {
+        padding: 0.5rem 3rem;
+        border-radius: 8px;
+
+        .score-title {
+            text-transform: uppercase;
+            color: $warning;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .score-value {
+            text-align: center;
+            font-size: 3.5rem;
+            color: $grey;
+            font-weight: 600;
+        }
+    }
 }

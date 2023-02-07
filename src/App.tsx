@@ -4,7 +4,7 @@ import Header from "./core/Header";
 function App() {
   return (
     <div className="h-100 d-flex flex-column">
-      <header id="header">
+      <header id="header" className="h-100">
         <Header />
       </header>
       <main className="main-content flex-grow-1"></main>
