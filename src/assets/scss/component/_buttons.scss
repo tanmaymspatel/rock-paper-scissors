@@ -1,12 +1,12 @@
 .btn {
-    padding: 1rem;
+    padding: 0.75rem 3rem;
     background-color: transparent;
-    border: none;
-    border-radius: 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
     transition: $transition-timing all;
 
     &:hover {
-        opacity: 70%;
+        transform: scale(1.1);
     }
 
     &:focus-visible {
@@ -15,10 +15,10 @@
 
     .btn-text {
         font-weight: 700;
+        letter-spacing: 2px;
     }
 }
 
-.btn-primary {
-    background-color: $primary;
-    color: $light;
+.btn-outline-light {
+    border-color: $light;
 }
