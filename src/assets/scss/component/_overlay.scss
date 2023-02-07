@@ -1,0 +1,26 @@
+.back-drop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($bg-lite, 0.7);
+    z-index: 20;
+
+    .overlay-content {
+        padding: 2rem;
+        border-radius: 8px;
+        z-index: 30;
+    }
+
+    .overlay-header {
+        padding: 0 0 2.5rem;
+
+        .overlay-title {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: $bg;
+        }
+    }
+
+}
