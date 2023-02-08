@@ -1,15 +1,14 @@
-import Chip from "./Chip";
+import { useContext } from "react";
+
+import { GameContext } from "../context/game-context/gameContext";
+import GameInitialPosition from "./GameInitialPosition";
+import GamePlay from "./GamePlay";
 
 function GameContent() {
+    const { playing } = useContext(GameContext);
     return (
         <div className="h-100 container d-flex align-items-center">
-            <div className="h-100 game-body position-relative d-flex align-items-center justify-content-center ">
-                <img src={process.env.PUBLIC_URL + '/images/bg-triangle.svg'} alt="triangle-background" className="game-bkg position-absolute" />
-                <Chip chipClass="chip-paper" />
-                <Chip chipClass="chip-scissors" />
-                <Chip chipClass="chip-paper" />
-                <Chip chipClass="chip-rock" />
-            </div>
+            {!playing ? <GameInitialPosition /> : <GamePlay />}
         </div>
     )
 };
