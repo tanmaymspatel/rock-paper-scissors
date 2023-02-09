@@ -14,8 +14,8 @@ function Chip({ name, win }: IChipProps) {
             onClick={() => chipClickHandler(name)}
         >
             <div className="inner-circle d-flex align-items-center justify-content-center border-circle">
-                <img src={process.env.PUBLIC_URL + `/images/icon-${name}.svg`} alt="triangle-background"
-                    className={`${!name ? "d-none" : ""} ${playing ? "img-game-play" : ""}`} />
+                <img src={process.env.PUBLIC_URL + `/images/icon-${name}.svg`} alt={`${name}-chip`}
+                    className={`${!name ? "d-none" : ""} ${playing ? "img-game-play" : ""} chip-image`} />
             </div>
         </div>
     )

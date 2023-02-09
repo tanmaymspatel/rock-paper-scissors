@@ -4,16 +4,24 @@ body {
 
 .main-content {
     .game-body {
-        width: 450px;
+        width: 350px;
         height: 450px;
         margin: auto;
+
+        @include breakpoint-up(sm) {
+            width: 500px;
+        }
     }
 
     .game-bkg {
         left: 50%;
         top: 50%;
-        width: 350px;
+        width: 250px;
         transform: translate(-50%, -50%);
+
+        @include breakpoint-up(sm) {
+            width: 350px;
+        }
     }
 
     .chip-hover {
@@ -22,16 +30,28 @@ body {
         }
     }
 
+    // chip size before game starts
     .chip-before {
-        width: 200px;
-        height: 200px;
+        width: 130px;
+        height: 130px;
+
+        @include breakpoint-up(sm) {
+            width: 200px;
+            height: 200px;
+        }
 
         .inner-circle {
-            height: 140px;
-            width: 140px;
+            height: 100px;
+            width: 100px;
+
+            @include breakpoint-up(sm) {
+                width: 140px;
+                height: 140px;
+            }
         }
     }
 
+    // chip size after game starts
     .chip-after {
         height: 280px;
         width: 280px;
@@ -56,26 +76,43 @@ body {
         }
 
         &.chip-paper {
-            left: 0;
-            top: 0;
+            left: 10px;
+            top: 50px;
             background-color: $secondary-lite;
             border: 1px solid $secondary;
-            box-shadow: 0 10px 0 0 $secondary;
+            box-shadow: 0 7px 0 0 $secondary;
+
+            @include breakpoint-up(sm) {
+                box-shadow: 0 10px 0 0 $secondary;
+                left: 0;
+                top: 0;
+            }
         }
 
         &.chip-scissors {
-            right: 0;
-            top: 0;
+            right: 10px;
+            top: 50px;
             background-color: $primary-lite;
             border: 1px solid $primary;
-            box-shadow: 0 10px 0 0 $primary;
+            box-shadow: 0 7px 0 0 $primary;
+
+            @include breakpoint-up(sm) {
+                box-shadow: 0 10px 0 0 $primary;
+                right: 0;
+                top: 0;
+            }
         }
 
         &.chip-rock {
-            bottom: 0;
+            bottom: 70px;
             background-color: $danger-lite;
             border: 1px solid $danger;
-            box-shadow: 0 10px 0 0 $danger;
+            box-shadow: 0 7px 0 0 $danger;
+
+            @include breakpoint-up(sm) {
+                box-shadow: 0 10px 0 0 $danger;
+                bottom: 0;
+            }
         }
 
         &.chip-default {
@@ -84,6 +121,14 @@ body {
                 box-shadow: none;
                 width: 220px;
                 height: 220px;
+            }
+        }
+
+        .chip-image {
+            width: 40px;
+
+            @include breakpoint-up(sm) {
+                width: 60px;
             }
         }
 
