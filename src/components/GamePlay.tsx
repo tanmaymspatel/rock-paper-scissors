@@ -8,7 +8,7 @@ function GamePlay() {
     const { picked, housePicked, gameOver, result } = useContext(GameContext);
 
     return (
-        <div className={`${gameOver ? "game-over" : ""} game-play-container h-100 w-100 d-flex justify-content-between position-relative`}>
+        <div className={`${gameOver ? "game-over" : ""} game-play-container h-100 d-flex justify-content-between`}>
             <div className="d-flex flex-column align-items-center">
                 <h4 className="game-title text-light">You Picked</h4>
                 <Chip name={picked} win={result === 'win' ? "win" : ""} />

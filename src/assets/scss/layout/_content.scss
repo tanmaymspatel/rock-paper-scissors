@@ -53,12 +53,45 @@ body {
 
     // chip size after game starts
     .chip-after {
-        height: 280px;
-        width: 280px;
+        width: 130px;
+        height: 130px;
 
-        .inner-circle {
+        @include breakpoint-up(sm) {
             height: 200px;
             width: 200px;
+        }
+
+        @include breakpoint-up(lg) {
+            height: 240px;
+            width: 240px;
+        }
+
+        @include breakpoint-up(xl) {
+            height: 280px;
+            width: 280px;
+        }
+
+        .inner-circle {
+            height: 100px;
+            width: 100px;
+
+            @include breakpoint-up(sm) {
+                height: 150px;
+                width: 150px;
+
+            }
+
+            @include breakpoint-up(lg) {
+                height: 170px;
+                width: 170px;
+
+            }
+
+            @include breakpoint-up(xl) {
+                height: 200px;
+                width: 200px;
+
+            }
         }
     }
 
@@ -72,7 +105,11 @@ body {
         transition: $transition-timing all;
 
         &.win {
-            box-shadow: 0 0 0 50px hsl(0deg 0% 59% / 20%), 0 0 0 100px hsl(0deg 0% 59% / 20%), 0 0 0 150px hsl(0deg 0% 59% / 20%), 0 0 0 200px hsl(0deg 0% 59% / 10%) !important;
+            box-shadow: 0 0 0 30px hsl(0deg 0% 59% / 20%), 0 0 0 60px hsl(0deg 0% 59% / 20%), 0 0 0 90px hsl(0deg 0% 59% / 20%), 0 0 0 120px hsl(0deg 0% 59% / 10%) !important;
+
+            @include breakpoint-up(sm) {
+                box-shadow: 0 0 0 50px hsl(0deg 0% 59% / 20%), 0 0 0 100px hsl(0deg 0% 59% / 20%), 0 0 0 150px hsl(0deg 0% 59% / 20%), 0 0 0 200px hsl(0deg 0% 59% / 10%) !important;
+            }
         }
 
         &.chip-paper {
@@ -119,8 +156,8 @@ body {
             .inner-circle {
                 background-color: rgba($bg-lite, 0.3);
                 box-shadow: none;
-                width: 220px;
-                height: 220px;
+                width: 100px;
+                height: 100px;
             }
         }
 
@@ -139,21 +176,47 @@ body {
     }
 
     .game-play-container {
-        width: 650px;
+        width: 350px;
         margin: auto;
         padding: 3rem 0;
         transition: $transition-timing all;
 
+        @include breakpoint-up(sm) {
+            width: 650px;
+
+        }
+
         &.game-over {
-            width: 80%;
+            width: 90%;
+
+            @include breakpoint-up(sm) {
+                width: 80%;
+            }
+
+            @include breakpoint-up(md) {
+                width: 100%;
+            }
+
+            @include breakpoint-up(lg) {
+                width: 80%;
+            }
         }
     }
 
     .game-title {
         padding-bottom: 4rem;
         text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         letter-spacing: 3px;
+        text-align: center;
+
+        @include breakpoint-up(sm) {
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint-up(md) {
+            text-align: start;
+        }
     }
 
     .result-box {
@@ -166,7 +229,11 @@ body {
 
         &.game-over {
             opacity: 1;
-            bottom: 15rem;
+            bottom: 10rem;
+
+            @include breakpoint-up(md) {
+                bottom: 15rem;
+            }
         }
 
         .btn-text {
@@ -175,9 +242,13 @@ body {
         }
 
         .result-title {
-            font-size: 3.5rem;
+            font-size: 3rem;
             text-transform: uppercase;
             padding: 1rem 0;
+
+            @include breakpoint-up(md) {
+                font-size: 3.5rem;
+            }
         }
     }
 }
