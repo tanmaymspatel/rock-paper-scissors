@@ -7,20 +7,52 @@
     background-color: rgba($bg-lite, 0.7);
     z-index: 20;
 
+
     .overlay-content {
-        padding: 2rem;
-        border-radius: 8px;
-        z-index: 30;
-    }
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10rem;
+        border-radius: 0;
 
-    .overlay-header {
-        padding: 0 0 2.5rem;
+        @include breakpoint-up(md) {
+            position: static;
+            height: auto;
+            width: auto;
+            display: block;
+            padding: 2rem;
+            border-radius: 12px;
+        }
 
-        .overlay-title {
-            font-size: 2rem;
-            text-transform: uppercase;
-            color: $bg;
+        .overlay-header {
+            margin: 0 0 2.5rem;
+
+            @include breakpoint-up(md) {
+                position: relative;
+            }
+
+            .overlay-title {
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: $bg;
+            }
+
+            .overlay-close {
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include breakpoint-up(md) {
+                    top: 50%;
+                    left: 90%;
+                    transform: translateY(-50%);
+                }
+            }
         }
     }
-
 }

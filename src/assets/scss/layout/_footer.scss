@@ -1,8 +1,17 @@
 #footer {
-    flex: 0 0 100px;
+    flex: 0 0 70px;
     padding: 0 5vw;
 
+    @include breakpoint-up(md) {
+        flex: 0 0 100px;
+    }
+
     .footer-content {
-        text-align: end;
+        text-align: center;
+
+        @include breakpoint-up(md) {
+            text-align: end;
+
+        }
     }
 }

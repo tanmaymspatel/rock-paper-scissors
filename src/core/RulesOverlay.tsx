@@ -9,7 +9,7 @@ function RulesOverlay({ setShowOverlay }: IOverlayProps) {
             <div className="overlay-content bg-light">
                 <div className="overlay-header d-flex align-items-center justify-content-between">
                     <h4 className="overlay-title">Rules</h4>
-                    <img src={process.env.PUBLIC_URL + '/images/icon-close.svg'} alt="close-overlay" className="cursor-pointer" onClick={() => setShowOverlay(false)} />
+                    <img src={process.env.PUBLIC_URL + '/images/icon-close.svg'} alt="close-overlay" className="cursor-pointer overlay-close" onClick={() => setShowOverlay(false)} />
                 </div>
                 <img src={process.env.PUBLIC_URL + '/images/image-rules.svg'} alt="rules-of-game" />
             </div>
