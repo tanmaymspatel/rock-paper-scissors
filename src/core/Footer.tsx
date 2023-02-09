@@ -9,7 +9,7 @@ function Footer() {
                 <RulesOverlay
                     setShowOverlay={setShowOverlay}
                 />}
-            <div className="container h-100">
+            <div className="h-100">
                 <div className="footer-content">
                     <button className="btn btn-outline-light text-light" onClick={() => setShowOverlay(true)}>
                         <span className="btn-text">

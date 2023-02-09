@@ -16,9 +16,19 @@
     .btn-text {
         font-weight: 700;
         letter-spacing: 2px;
+        text-transform: uppercase;
     }
 }
 
 .btn-outline-light {
     border-color: $light;
+}
+
+.btn-light {
+    background-color: $light;
+    border-color: $light;
+
+    &:hover {
+        color: $danger;
+    }
 }

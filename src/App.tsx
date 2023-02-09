@@ -1,3 +1,4 @@
+import GameContent from "./components/GameContent";
 import Footer from "./core/Footer";
 import Header from "./core/Header";
 
@@ -7,7 +8,9 @@ function App() {
       <header id="header" className="h-100">
         <Header />
       </header>
-      <main className="main-content flex-grow-1"></main>
+      <main className="main-content flex-grow-1">
+        <GameContent />
+      </main>
       <footer id="footer">
         <Footer />
       </footer>

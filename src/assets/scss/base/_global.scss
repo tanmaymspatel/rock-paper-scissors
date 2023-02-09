@@ -72,6 +72,10 @@ button {
     display: none;
 }
 
+.pointer-events-none {
+    pointer-events: none;
+}
+
 // flex styles
 
 .d-flex {
@@ -105,6 +109,10 @@ button {
 .row {
     display: flex;
     flex-wrap: wrap;
+}
+
+.border-circle {
+    border-radius: 50%;
 }
 
 // container
