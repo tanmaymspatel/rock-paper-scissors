@@ -46,9 +46,14 @@ body {
         width: 80px;
     }
 
+
     .chip-container {
 
         transition: $transition-timing all;
+
+        &.win {
+            box-shadow: 0 0 0 50px hsl(0deg 0% 59% / 20%), 0 0 0 100px hsl(0deg 0% 59% / 20%), 0 0 0 150px hsl(0deg 0% 59% / 20%), 0 0 0 200px hsl(0deg 0% 59% / 10%) !important;
+        }
 
         &.chip-paper {
             left: 0;
