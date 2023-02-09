@@ -4,16 +4,24 @@ body {
 
 .main-content {
     .game-body {
-        width: 450px;
+        width: 350px;
         height: 450px;
         margin: auto;
+
+        @include breakpoint-up(sm) {
+            width: 500px;
+        }
     }
 
     .game-bkg {
         left: 50%;
         top: 50%;
-        width: 350px;
+        width: 250px;
         transform: translate(-50%, -50%);
+
+        @include breakpoint-up(sm) {
+            width: 350px;
+        }
     }
 
     .chip-hover {
@@ -22,23 +30,68 @@ body {
         }
     }
 
+    // chip size before game starts
     .chip-before {
-        width: 200px;
-        height: 200px;
+        width: 130px;
+        height: 130px;
+
+        @include breakpoint-up(sm) {
+            width: 200px;
+            height: 200px;
+        }
 
         .inner-circle {
-            height: 140px;
-            width: 140px;
+            height: 100px;
+            width: 100px;
+
+            @include breakpoint-up(sm) {
+                width: 140px;
+                height: 140px;
+            }
         }
     }
 
+    // chip size after game starts
     .chip-after {
-        height: 280px;
-        width: 280px;
+        width: 130px;
+        height: 130px;
 
-        .inner-circle {
+        @include breakpoint-up(sm) {
             height: 200px;
             width: 200px;
+        }
+
+        @include breakpoint-up(lg) {
+            height: 240px;
+            width: 240px;
+        }
+
+        @include breakpoint-up(xl) {
+            height: 280px;
+            width: 280px;
+        }
+
+        .inner-circle {
+            height: 100px;
+            width: 100px;
+
+            @include breakpoint-up(sm) {
+                height: 150px;
+                width: 150px;
+
+            }
+
+            @include breakpoint-up(lg) {
+                height: 170px;
+                width: 170px;
+
+            }
+
+            @include breakpoint-up(xl) {
+                height: 200px;
+                width: 200px;
+
+            }
         }
     }
 
@@ -52,38 +105,67 @@ body {
         transition: $transition-timing all;
 
         &.win {
-            box-shadow: 0 0 0 50px hsl(0deg 0% 59% / 20%), 0 0 0 100px hsl(0deg 0% 59% / 20%), 0 0 0 150px hsl(0deg 0% 59% / 20%), 0 0 0 200px hsl(0deg 0% 59% / 10%) !important;
+            box-shadow: 0 0 0 30px hsl(0deg 0% 59% / 20%), 0 0 0 60px hsl(0deg 0% 59% / 20%), 0 0 0 90px hsl(0deg 0% 59% / 20%), 0 0 0 120px hsl(0deg 0% 59% / 10%) !important;
+
+            @include breakpoint-up(sm) {
+                box-shadow: 0 0 0 50px hsl(0deg 0% 59% / 20%), 0 0 0 100px hsl(0deg 0% 59% / 20%), 0 0 0 150px hsl(0deg 0% 59% / 20%), 0 0 0 200px hsl(0deg 0% 59% / 10%) !important;
+            }
         }
 
         &.chip-paper {
-            left: 0;
-            top: 0;
+            left: 10px;
+            top: 50px;
             background-color: $secondary-lite;
             border: 1px solid $secondary;
-            box-shadow: 0 10px 0 0 $secondary;
+            box-shadow: 0 7px 0 0 $secondary;
+
+            @include breakpoint-up(sm) {
+                box-shadow: 0 10px 0 0 $secondary;
+                left: 0;
+                top: 0;
+            }
         }
 
         &.chip-scissors {
-            right: 0;
-            top: 0;
+            right: 10px;
+            top: 50px;
             background-color: $primary-lite;
             border: 1px solid $primary;
-            box-shadow: 0 10px 0 0 $primary;
+            box-shadow: 0 7px 0 0 $primary;
+
+            @include breakpoint-up(sm) {
+                box-shadow: 0 10px 0 0 $primary;
+                right: 0;
+                top: 0;
+            }
         }
 
         &.chip-rock {
-            bottom: 0;
+            bottom: 70px;
             background-color: $danger-lite;
             border: 1px solid $danger;
-            box-shadow: 0 10px 0 0 $danger;
+            box-shadow: 0 7px 0 0 $danger;
+
+            @include breakpoint-up(sm) {
+                box-shadow: 0 10px 0 0 $danger;
+                bottom: 0;
+            }
         }
 
         &.chip-default {
             .inner-circle {
                 background-color: rgba($bg-lite, 0.3);
                 box-shadow: none;
-                width: 220px;
-                height: 220px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .chip-image {
+            width: 40px;
+
+            @include breakpoint-up(sm) {
+                width: 60px;
             }
         }
 
@@ -94,21 +176,47 @@ body {
     }
 
     .game-play-container {
-        width: 650px;
+        width: 350px;
         margin: auto;
         padding: 3rem 0;
         transition: $transition-timing all;
 
+        @include breakpoint-up(sm) {
+            width: 650px;
+
+        }
+
         &.game-over {
-            width: 80%;
+            width: 90%;
+
+            @include breakpoint-up(sm) {
+                width: 80%;
+            }
+
+            @include breakpoint-up(md) {
+                width: 100%;
+            }
+
+            @include breakpoint-up(lg) {
+                width: 80%;
+            }
         }
     }
 
     .game-title {
         padding-bottom: 4rem;
         text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         letter-spacing: 3px;
+        text-align: center;
+
+        @include breakpoint-up(sm) {
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint-up(md) {
+            text-align: start;
+        }
     }
 
     .result-box {
@@ -121,7 +229,11 @@ body {
 
         &.game-over {
             opacity: 1;
-            bottom: 15rem;
+            bottom: 10rem;
+
+            @include breakpoint-up(md) {
+                bottom: 15rem;
+            }
         }
 
         .btn-text {
@@ -130,9 +242,13 @@ body {
         }
 
         .result-title {
-            font-size: 3.5rem;
+            font-size: 3rem;
             text-transform: uppercase;
             padding: 1rem 0;
+
+            @include breakpoint-up(md) {
+                font-size: 3.5rem;
+            }
         }
     }
 }
