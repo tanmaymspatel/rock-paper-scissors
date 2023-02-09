@@ -1,17 +1,31 @@
 #header {
-    flex: 0 0 250px;
+    flex: 0 0 200px;
+
+    @include breakpoint-up(md) {
+        flex: 0 0 280px;
+    }
 
     .header-content {
-        padding: 2rem;
+        padding: 1rem;
         border: 3px solid $grey;
         border-radius: 16px;
-        width: 75%;
+        width: 90%;
         margin: 0 auto;
+
+        @include breakpoint-up(md) {
+            padding: 2rem;
+            width: 75%;
+        }
     }
 
     .header-title {
-        line-height: 32px;
-        font-size: 2.5rem;
+        line-height: 20px;
+        font-size: 1.5rem;
+
+        @include breakpoint-up(md) {
+            line-height: 32px;
+            font-size: 2.5rem;
+        }
 
         .header-title-text {
             display: block;
@@ -20,22 +34,34 @@
     }
 
     .score {
-        padding: 1.5rem 3rem;
+        padding: 0.5rem 1.5rem;
         border-radius: 8px;
+
+        @include breakpoint-up(md) {
+            padding: 1.5rem 3rem;
+        }
 
         .score-title {
             text-transform: uppercase;
             color: $warning;
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1rem;
             letter-spacing: 2px;
+
+            @include breakpoint-up(md) {
+                font-size: 1.25rem;
+            }
         }
 
         .score-value {
             text-align: center;
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             color: $grey;
             font-weight: 600;
+
+            @include breakpoint-up(md) {
+                font-size: 3.5rem;
+            }
         }
     }
 }
